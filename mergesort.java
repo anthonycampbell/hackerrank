@@ -4,14 +4,14 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Solution {
+public class Mergesort {
 
     static Integer[] mergesort(int[] arr) {
-        List<Integer> l = new ArrayList<Integer>();
-        List<Integer> r = new ArrayList<Integer>();
-        Hashtable<Integer, ArrayList<Integer>> m = new Hashtable<Integer, ArrayList<Integer>>();
+        List<Integer> l = new LinkedList<Integer>();
+        List<Integer> r = new LinkedList<Integer>();
+        HashMap<Integer, LinkedList<Integer>> m = new HashMap<Integer, LinkedList<Integer>>();
         for (int i = 0; i < arr.length; i++){
-            ArrayList<Integer> temp = new ArrayList<Integer>();
+            LinkedList<Integer> temp = new LinkedList<Integer>();
             temp.add(arr[i]);
             m.put(i, temp);
         }
@@ -31,8 +31,8 @@ public class Solution {
         return result;
     }
 
-    static ArrayList<Integer> merge(ArrayList<Integer> l, ArrayList<Integer> r){
-        ArrayList<Integer> merged = new ArrayList<Integer>();
+    static LinkedList<Integer> merge(LinkedList<Integer> l, LinkedList<Integer> r){
+        LinkedList<Integer> merged = new LinkedList<Integer>();
         while ((!l.isEmpty()) || (!r.isEmpty())){
             if (l.isEmpty()){
                 merged.add(r.get(0));
