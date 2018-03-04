@@ -4,7 +4,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Solution {
+public class ContactsProblem {
 
     public static void main(String[] args) {
         Hashtable<String, Integer> contactHash = new Hashtable<String, Integer>();

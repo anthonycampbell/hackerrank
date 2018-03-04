@@ -4,7 +4,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Solution {
+public class CheckForBalancedBrackets {
 
     public static boolean isBalanced(String expression) {
         String previousState = "";
